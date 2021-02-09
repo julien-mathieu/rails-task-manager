@@ -1,0 +1,12 @@
+<h2><%= @task.name %></h2>
+<p><%= @task.details %></p>
+<% if @task.completed %>
+  <p>The task is completed</p>
+<% else %>
+  <p>The task needs to be completed</p>
+<% end %>
+
+<%= link_to "Edit the task", edit_path %>
+<%= link_to "Delete the task", task_path(@task), method: :delete %>
+
+<%= link_to "Go back to the list", tasks_path %>
